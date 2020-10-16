@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import Clock from './Clock';
 import Photo from './Photo';
 import './App.css';
 
