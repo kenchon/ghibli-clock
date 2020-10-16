@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pics-clock/static/css/main.5f361e03.chunk.css",
-    "main.js": "/pics-clock/static/js/main.9c006e23.chunk.js",
-    "main.js.map": "/pics-clock/static/js/main.9c006e23.chunk.js.map",
+    "main.js": "/pics-clock/static/js/main.bb44e0c2.chunk.js",
+    "main.js.map": "/pics-clock/static/js/main.bb44e0c2.chunk.js.map",
     "runtime-main.js": "/pics-clock/static/js/runtime-main.15298835.js",
     "runtime-main.js.map": "/pics-clock/static/js/runtime-main.15298835.js.map",
     "static/js/2.9be3a7e6.chunk.js": "/pics-clock/static/js/2.9be3a7e6.chunk.js",
     "static/js/2.9be3a7e6.chunk.js.map": "/pics-clock/static/js/2.9be3a7e6.chunk.js.map",
     "index.html": "/pics-clock/index.html",
-    "precache-manifest.dc90c4a99c7b3e1478c65ca0c3650dd7.js": "/pics-clock/precache-manifest.dc90c4a99c7b3e1478c65ca0c3650dd7.js",
+    "precache-manifest.01c0cfed9b4a7642d623171ec777ddeb.js": "/pics-clock/precache-manifest.01c0cfed9b4a7642d623171ec777ddeb.js",
     "service-worker.js": "/pics-clock/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/pics-clock/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.9be3a7e6.chunk.js.LICENSE.txt": "/pics-clock/static/js/2.9be3a7e6.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.15298835.js",
     "static/js/2.9be3a7e6.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.9c006e23.chunk.js"
+    "static/js/main.bb44e0c2.chunk.js"
   ]
 }
