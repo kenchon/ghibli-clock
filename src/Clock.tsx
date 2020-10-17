@@ -2,7 +2,7 @@ import { cleanup } from '@testing-library/react'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-const imgHeight = window.innerHeight
+let imgHeight = window.innerHeight
 
 const Clock:React.FC = () => {
 
@@ -12,6 +12,10 @@ const Clock:React.FC = () => {
         return function cleanup(){
             clearInterval(timerId);
         };
+    })
+
+    window.addEventListener("orientationchange", () => {
+        window.location.reload()
     })
 
     function tick() {
@@ -33,7 +37,7 @@ const Clock:React.FC = () => {
 export default Clock
 
 const StyledClock = styled.div`
-    /* font styles */
+    /* basic font styles */
     font-family: Courier New;
     font-weight: 900;
     z-index: 2;
@@ -62,6 +66,28 @@ const StyledClock = styled.div`
 
     ul {
         list-style: none;
+    }
+
+    /* config for mobile device */
+    @media (orientation: landscape) {
+        /* TODO: Use dynamic 'top' value */
+        top: ${imgHeight/2 - 120}px;
+    }
+
+    @media (orientation: portrait) {
+        #time {
+            font-size: 60px;
+        }
+
+        #date {
+            font-size: 40px;
+        }
+
+         /* TODO: Use dynamic 'left' value */
+        left: -30px;
+
+        /* positional styles*/
+        top: ${imgHeight/2 - 80}px;
     }
 `
 
