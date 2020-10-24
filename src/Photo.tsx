@@ -17,7 +17,6 @@ const Photo: React.FC = () => {
 
     useEffect(() => {
         return function cleanup(){
-            console.log(`clean up function: ${currentTime}`)
             if(currentTime.toLocaleTimeString().slice(6, 9) === "00") {
                 setCurrentImgSrc(`https://loremflickr.com/${imgWidth}/${imgHeight}/cat?=${currentTime}`)
             }
