@@ -7,7 +7,6 @@ const Photo: React.FC = () => {
 
     let imgWidth = window.innerWidth
     let imgHeight = window.innerHeight
-    let imgSrc = `https://loremflickr.com/${imgWidth}/${imgHeight}/cat`
 
     const currentTime = useContext(ClockContext)
 
@@ -15,12 +14,11 @@ const Photo: React.FC = () => {
     // TODO: 00秒ちょうどに画像が切り替わるようにする（ƒetchに3秒ぐらい時間がかかる）
     
     const [currentImgSrc, setCurrentImgSrc] = useState(()=> `https://loremflickr.com/${imgWidth}/${imgHeight}/cat`)
-    const [nextImgSrc, setNextImgSrc] = useState(()=> `https://loremflickr.com/${imgWidth}/${imgHeight}/cat`)
 
     useEffect(() => {
         return function cleanup(){
             console.log(`clean up function: ${currentTime}`)
-            if(currentTime.toLocaleTimeString().slice(6, 9) == "00") {
+            if(currentTime.toLocaleTimeString().slice(6, 9) === "00") {
                 setCurrentImgSrc(`https://loremflickr.com/${imgWidth}/${imgHeight}/cat?=${currentTime}`)
             }
         };
@@ -29,7 +27,7 @@ const Photo: React.FC = () => {
     return (
         <StyledPhoto>
             <Clock />
-            <img width={imgWidth} height={imgHeight} src={currentImgSrc}/>
+            <img width={imgWidth} height={imgHeight} src={currentImgSrc} alt={"Clock Background Image"}/>
         </StyledPhoto>
     )
 }
