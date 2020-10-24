@@ -27,7 +27,7 @@ const Photo: React.FC = () => {
     return (
         <StyledPhoto>
             <Clock />
-            <img width={imgWidth} height={imgHeight} src={currentImgSrc} alt={"Clock Background Image"}/>
+            <img width={imgWidth} height={imgHeight} src={currentImgSrc} alt={"Clock"}/>
         </StyledPhoto>
     )
 }
