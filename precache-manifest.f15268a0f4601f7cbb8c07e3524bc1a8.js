@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df55d9b9609ef7cd93f8f9369a499060",
+    "revision": "0b79fca371b7de34b28cc6b314211b64",
     "url": "/pics-clock/index.html"
   },
   {
-    "revision": "34c5d9be73146334fdbf",
+    "revision": "f2b458fff2d22aae03cc",
     "url": "/pics-clock/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pics-clock/static/js/2.9be3a7e6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "34c5d9be73146334fdbf",
-    "url": "/pics-clock/static/js/main.e7d1e8ed.chunk.js"
+    "revision": "f2b458fff2d22aae03cc",
+    "url": "/pics-clock/static/js/main.7a8a8062.chunk.js"
   },
   {
     "revision": "3dfb1109226dc09928ea",
