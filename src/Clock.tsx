@@ -1,26 +1,17 @@
-import { cleanup } from '@testing-library/react'
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { ClockContext } from './App'
 
 let imgHeight = window.innerHeight
 
 const Clock:React.FC = () => {
 
-    const [currentTime, setCurrentTime] = useState(() => new Date())
-    useEffect(() => {
-        let timerId = setInterval(()=>tick(),1000);
-        return function cleanup(){
-            clearInterval(timerId);
-        };
-    })
+    const currentTime = useContext(ClockContext)
 
+    // Reload this component when screen is rotated to update CSS
     window.addEventListener("orientationchange", () => {
         window.location.reload()
     })
-
-    function tick() {
-        setCurrentTime(new Date());
-    }
 
     return (
         <div>

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import styled from 'styled-components'
 import Clock from './Clock'
+import { ClockContext } from './App'
 
 const Photo: React.FC = () => {
 
@@ -8,27 +9,22 @@ const Photo: React.FC = () => {
     let imgHeight = window.innerHeight
     let imgSrc = `https://loremflickr.com/${imgWidth}/${imgHeight}/cat`
 
-    // TODO: Clock でグローバルな currentTime を定義して，これを参照するようにする
+    const currentTime = useContext(ClockContext)
+
     // TODO: currentImgSrc の値を変えない方法で，<img> を再描画する方法を使用する
     // TODO: 00秒ちょうどに画像が切り替わるようにする（ƒetchに3秒ぐらい時間がかかる）
-    const [currentTime, setCurrentTime] = useState(() => new Date())
+    
     const [currentImgSrc, setCurrentImgSrc] = useState(()=> `https://loremflickr.com/${imgWidth}/${imgHeight}/cat`)
     const [nextImgSrc, setNextImgSrc] = useState(()=> `https://loremflickr.com/${imgWidth}/${imgHeight}/cat`)
 
     useEffect(() => {
-        let timerId = setInterval(()=>tick(),1000);
         return function cleanup(){
-            clearInterval(timerId);
+            console.log(`clean up function: ${currentTime}`)
             if(currentTime.toLocaleTimeString().slice(6, 9) == "00") {
                 setCurrentImgSrc(`https://loremflickr.com/${imgWidth}/${imgHeight}/cat?=${currentTime}`)
-                console.log(`imgSrc: ${imgSrc}`)
             }
         };
     })
-
-    function tick() {
-        setCurrentTime(new Date());
-    }
 
     return (
         <StyledPhoto>
