@@ -17,7 +17,7 @@ const Clock:React.FC = () => {
         <div>
             <StyledClock>
                 <ul>
-                    <li><span id="date">{currentTime.toLocaleDateString()}</span></li>
+                    <li><span id="date">{currentTime.toLocaleDateString().replace(/\//g, ' ')}</span></li>
                     <li><span id="time">{currentTime.toLocaleTimeString()}</span></li>
                 </ul>
             </StyledClock>
@@ -29,15 +29,16 @@ export default Clock
 
 const StyledClock = styled.div`
     /* basic font styles */
-    font-family: Courier New;
-    font-weight: 900;
+    font-family: "Gas";
     z-index: 2;
     top: ${imgHeight/2 - 80}px;
+    float: right;
+    text-align: left;
 
-    text-shadow: 2px 2px 0 #FFF, -2px -2px 0 #FFF,
-              -2px 2px 0 #FFF, 2px -2px 0 #FFF,
-              0px 2px 0 #FFF,  0-2px 0 #FFF,
-              -2px 0 0 #FFF, 2px 0 0 #FFF;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000,
+              -2px 2px 0 #000, 2px -2px 0 #000,
+              0px 2px 0 #000,  0-2px 0 #000,
+              -2px 0 0 #000, 2px 0 0 #000;
 
     #time {
         font-size: 150px;
