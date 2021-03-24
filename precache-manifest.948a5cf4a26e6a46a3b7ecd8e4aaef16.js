@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "15dba46f9e725311037bbdf94633bf84",
+    "revision": "731fe800d49f2eed6969bb0cafeb6754",
     "url": "/ghibli-clock/index.html"
   },
   {
-    "revision": "704f1020b0cb84304690",
-    "url": "/ghibli-clock/static/css/main.5f361e03.chunk.css"
+    "revision": "69f06c00264a5f2d5334",
+    "url": "/ghibli-clock/static/css/main.9af22bca.chunk.css"
   },
   {
     "revision": "550456eb280aea89d9a1",
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ghibli-clock/static/js/2.b483194a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "704f1020b0cb84304690",
-    "url": "/ghibli-clock/static/js/main.5dd34a5a.chunk.js"
+    "revision": "69f06c00264a5f2d5334",
+    "url": "/ghibli-clock/static/js/main.8309876f.chunk.js"
   },
   {
     "revision": "91970861d7fe37808cca",
     "url": "/ghibli-clock/static/js/runtime-main.91fb4439.js"
+  },
+  {
+    "revision": "3349b928a45ddff3222527c217f2f276",
+    "url": "/ghibli-clock/static/media/GAS_____.3349b928.TTF"
   }
 ]);

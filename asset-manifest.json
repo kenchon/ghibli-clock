@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/ghibli-clock/static/css/main.5f361e03.chunk.css",
-    "main.js": "/ghibli-clock/static/js/main.5dd34a5a.chunk.js",
-    "main.js.map": "/ghibli-clock/static/js/main.5dd34a5a.chunk.js.map",
+    "main.css": "/ghibli-clock/static/css/main.9af22bca.chunk.css",
+    "main.js": "/ghibli-clock/static/js/main.8309876f.chunk.js",
+    "main.js.map": "/ghibli-clock/static/js/main.8309876f.chunk.js.map",
     "runtime-main.js": "/ghibli-clock/static/js/runtime-main.91fb4439.js",
     "runtime-main.js.map": "/ghibli-clock/static/js/runtime-main.91fb4439.js.map",
     "static/js/2.b483194a.chunk.js": "/ghibli-clock/static/js/2.b483194a.chunk.js",
     "static/js/2.b483194a.chunk.js.map": "/ghibli-clock/static/js/2.b483194a.chunk.js.map",
     "index.html": "/ghibli-clock/index.html",
-    "precache-manifest.0b77529da5e8b14490ec9c8057c0ce77.js": "/ghibli-clock/precache-manifest.0b77529da5e8b14490ec9c8057c0ce77.js",
+    "precache-manifest.948a5cf4a26e6a46a3b7ecd8e4aaef16.js": "/ghibli-clock/precache-manifest.948a5cf4a26e6a46a3b7ecd8e4aaef16.js",
     "service-worker.js": "/ghibli-clock/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/ghibli-clock/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.b483194a.chunk.js.LICENSE.txt": "/ghibli-clock/static/js/2.b483194a.chunk.js.LICENSE.txt"
+    "static/css/main.9af22bca.chunk.css.map": "/ghibli-clock/static/css/main.9af22bca.chunk.css.map",
+    "static/js/2.b483194a.chunk.js.LICENSE.txt": "/ghibli-clock/static/js/2.b483194a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ghibli-clock/static/media/GAS_____.3349b928.TTF"
   },
   "entrypoints": [
     "static/js/runtime-main.91fb4439.js",
     "static/js/2.b483194a.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.5dd34a5a.chunk.js"
+    "static/css/main.9af22bca.chunk.css",
+    "static/js/main.8309876f.chunk.js"
   ]
 }
