@@ -4,82 +4,65 @@ import { ClockContext } from './App'
 
 let imgHeight = window.innerHeight
 
-const Clock:React.FC = () => {
 
+const Clock: React.FC = () => {
     const currentTime = useContext(ClockContext)
-
-    // Reload this component when screen is rotated to update CSS
-    window.addEventListener("orientationchange", () => {
-        window.location.reload()
-    })
-
+    // orientationchangeでリロードはUX的に避ける
     return (
-        <div>
-            <StyledClock>
-                <ul>
-                    <li><span id="date">{currentTime.toLocaleDateString().replace(/\//g, ' ')}</span></li>
-                    <li><span id="time">{currentTime.toLocaleTimeString()}</span></li>
-                </ul>
-            </StyledClock>
-        </div>
+        <StyledClock>
+            <div className="clock-bg">
+                <span className="date">{currentTime.toLocaleDateString().replace(/\//g, ' ')}</span>
+                <span className="time">{currentTime.toLocaleTimeString()}</span>
+            </div>
+        </StyledClock>
     )
 }
 
 export default Clock
 
 const StyledClock = styled.div`
-    /* basic font styles */
-    font-family: "Gas";
-    z-index: 2;
-    top: ${imgHeight/2 - 80}px;
-    float: right;
-    text-align: left;
-
-    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000,
-              -2px 2px 0 #000, 2px -2px 0 #000,
-              0px 2px 0 #000,  0-2px 0 #000,
-              -2px 0 0 #000, 2px 0 0 #000;
-
-    #time {
-        font-size: 150px;
+    font-family: "Gas", monospace, sans-serif;
+    .clock-bg {
+        background: rgba(0,0,0,0.45);
+        border-radius: 32px;
+        padding: 32px 48px;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(2px);
+        min-width: 420px;
+        min-height: 180px;
+        transition: min-width 0.2s;
     }
-
-    #date {
-        font-size: 60px;
+    .date {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 12px;
+        text-shadow: 2px 2px 8px #000, 0 0 8px #000;
+        font-family: inherit;
+        font-variant-numeric: tabular-nums;
     }
-
-    /* positional styles*/
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute; /* necessary for overlay*/ 
-    flex: 1;
-    align-self: 'absolute';
-
-    ul {
-        list-style: none;
+    .time {
+        font-size: 6rem;
+        color: #fff;
+        text-shadow: 2px 2px 12px #000, 0 0 12px #000;
+        letter-spacing: 0.05em;
+        font-family: inherit;
+        font-variant-numeric: tabular-nums;
     }
-
-    /* config for mobile device */
-    @media (orientation: landscape) {
-        /* TODO: Use dynamic 'top' value */
-        top: ${imgHeight/2 - 120}px;
-    }
-
-    @media (orientation: portrait) {
-        #time {
-            font-size: 60px;
+    @media (max-width: 600px) {
+        .clock-bg {
+            padding: 16px 8px;
+            min-width: 180px;
+            min-height: 80px;
         }
-
-        #date {
-            font-size: 40px;
+        .date {
+            font-size: 1.2rem;
         }
-
-         /* TODO: Use dynamic 'left' value */
-        left: -30px;
-
-        /* positional styles*/
-        top: ${imgHeight/2 - 80}px;
+        .time {
+            font-size: 2.5rem;
+        }
     }
 `
 
