@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "62cd1014d50c3d72587b03da028cb6fc",
+    "revision": "552dff3402f8a586e0867010ab8c2995",
     "url": "/ghibli-clock/index.html"
   },
   {
