@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ghibli-clock/precache-manifest.948a5cf4a26e6a46a3b7ecd8e4aaef16.js"
+  "/ghibli-clock/precache-manifest.bf03309ce578ecd22dcb0edc3495a388.js"
 );
 
 self.addEventListener('message', (event) => {
